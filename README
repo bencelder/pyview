@@ -1,0 +1,48 @@
+pyview -- an image viewer
+
+pyview is an easy to way to view, organize, and share the photos on your computer. It devotes as much screen space as possible to the actual image so you can focus on your memories instead of looking at menu bars. The most often used commands are easy to execute, typically with a single keystroke.
+
+Navigating the file structure is designed to be very fast -- arrow keys left and right select an image or folder, up takes you to the parent directory.  When a directory is selected, the down key takes you into that folder.
+
+*** Hotkeys *** 
+left/right arrow keys - browse through the files and folders in the current directory.
+up arrow key - go up on folder in the file system
+down arrow key - go into the selected folder
+c - copy image.  Multiple images can be copied at a time.
+v - paste all copied images into the current directory
+r - rotate image 90 degrees
+o - open the current directory in finder
+k - keep the image with you.  This way you can hang on to individual images while you look through pictures, and then upload all of them as an album to imgur
+u - upload all open images to imgur (not currently working)
+scroll up/down - zoom in/out
+delete - drop an image from being viewed
+command + delete - move image to the trash
+
+*** Uploading ***
+Images may be uploaded anonymously to imgur.  To do so, simply click the cloud icon in the upper left corner of the screen.  It will turn blue, indicating that the file has been uploaded, and your default browser will open to the newly created page.  If you wish to remove it from imgur, simply right-click the icon.  It will turn gray again to indicate a successful removal.
+
+An album can be uploaded by pressing u.  It will upload all open pictures and open your browser to the image page.  Note that one picture may be uploaded to multiple albums!  imgur does not allow anonymous albums to be created. 
+
+To enable albums, make a file named imgur_login.dat in the same directory as pyview.py and enter your username and password in this format, with spaces between the words and = sign:
+username = your_username_here
+password = your_password_here
+
+*** Installing ***
+NOTE: Skip to the bottom if you just want to use pyview.  There is now a binary available!
+This project has only been tested on OSX, and uses some system-dependent pathnames.  It may work on linux, but it has never been tested.  It is written entirely in python, so getting it to run on Windows would be a simple matter of updating file names to be system-agnostic.
+
+It was developed using Apple's Python 2.6.1.  Note that Python 3 will almost certainly not work!
+
+Dependencies: pygame, pyimgur, and their dependencies.  The easiest thing to do is get homebrew and easy_install to track down all the dependencies.
+
+To run: put the main file, pyview.py, and imgur.py together in some directory, along with the cloud icons.  To launch the application type
+python pyview.py
+
+pyview is now packaged into an easy to use binary.  To use it, simply double click the icon.  It can run from anywhere, but it will be happiest in the company of other applications on your computer.  Simply drag the icon onto the "Applications" icon in your system dock.
+
+*** Thanks ***
+Many thanks to the authors of pygame, pyimgur, and imgur.py for making their projects available!  Without those, this project would not have been possible in such a short time.  Also, many thanks to the organizers for HackYale 2013!
+
+Benjamin Elder
+benc.elder@gmail.com
+2013
